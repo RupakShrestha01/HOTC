@@ -39,7 +39,7 @@
 import {} from '#app'
 const route = useRoute()
 const name = route.params.slug
-const { data: mountain } = useFetch('http://127.0.0.1:8000/news/' + name)
+const { data: mountain } = useFetch('http://127.0.0.1:8000/events/' + name)
 </script>
 
 <style></style>
