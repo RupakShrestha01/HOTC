@@ -1,15 +1,11 @@
 <template>
-  <div v-for="obj in apiResponse.results" :key="obj.id">
-    <img :src="obj.header_image.small_square_crop" alt="" />
-    <div v-bind="slug">{{ obj.slug }}</div>
+  <div v-for="obj in galleryResponse.results" :key="obj.id">
+    {{ obj.file }}
   </div>
 </template>
 
 <script setup>
-const { data: apiResponse } = await useFetch('http://127.0.0.1:8000/news/')
-const slug = ref([])
-console.log(slug)
-
+const { data: galleryResponse } = useFetch('http://127.0.0.1:8000/download/')
 definePageMeta({
   layout: false,
 })

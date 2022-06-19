@@ -10,6 +10,11 @@ module.exports = {
     ,
   ],
   theme: {
+    extend: {
+      fontFamily: {
+        ane: ['Anek Malayalam', 'sans-serif'],
+      },
+    },
     screens: {
       sm: '375px',
       // => @media (min-width: 640px) { ... }
@@ -23,6 +28,7 @@ module.exports = {
 
     height: {
       128: '37rem',
+      100: '35rem',
     },
   },
 

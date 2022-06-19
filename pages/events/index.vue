@@ -5,6 +5,7 @@
       :key="obj.id"
       class="bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 w-4/5"
     >
+  
       <div class="p-5">
         <a href="#">
           <h5
@@ -44,5 +45,7 @@
 </template>
 
 <script setup>
+const route = useRoute()
+const name = route.params.slug
 const { data: eventResponses } = await useFetch(`http://127.0.0.1:8000/event/`)
 </script>

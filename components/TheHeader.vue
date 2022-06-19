@@ -1,6 +1,6 @@
 <template>
   <!-- Header -->
-  <div class="bg-blue-500 shadow-lg">
+  <div class="bg-blue-400 shadow-lg font-ane">
     <div
       class="px-2 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-full-xl md:px-24 lg:px-8"
     >
@@ -71,7 +71,7 @@
           <li>
             <a
               href="/"
-              class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-md shadow-md hover:bg-blue-500 hover:text-black hover:border-black hover:border-2 focus:shadow-outline focus:outline-none border-2"
+              class="inline-flex items-center justify-center px-6 font-medium tracking-wide text-white transition duration-200 rounded-md shadow-md hover:bg-blue-500 hover:text-black hover:border-black hover:border-2 focus:shadow-outline focus:outline-none border-2 py-1"
               aria-label="Sign up"
               title="Sign up"
             >

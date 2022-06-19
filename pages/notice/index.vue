@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="overflow-hidden grid grid-cols-1 gap-5">
+  <div class="pl-44">
+    <div class="overflow-hidden grid grid-cols-1 gap-5 w-[65rem]">
       <div
         v-for="obj in noticeResponse.results"
         :key="obj.id"
@@ -44,5 +44,4 @@
 
 <script setup>
 const { data: noticeResponse } = await useFetch(`http://127.0.0.1:8000/notice/`)
-
 </script>

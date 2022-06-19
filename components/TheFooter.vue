@@ -1,5 +1,5 @@
 <template>
-  <div class="relative mt-12 bg-blue-500">
+  <div class="relative mt-12 bg-blue-400">
     <div
       class="pt-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-full-xl md:px-24 lg:px-8"
     >

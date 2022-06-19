@@ -16,7 +16,8 @@
           {{ name }}
         </h2>
         <p class="text-base text-gray-700 md:text-lg">
-          {{ mountain.content }}
+                    <div class="" v-html="mountain.content ">
+          </div>
         </p>
       </div>
       <div class="mb-4 transition-shadow duration-300 hover:shadow-xl lg:mb-6">

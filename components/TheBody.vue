@@ -1,45 +1,33 @@
 <template>
-  <div class="flex flex-col gap-5">
-    <aside class="w-64" aria-label="Sidebar">
-      <div
-        class="overflow-y-auto py-4 px-3 bg-blue-500 rounded dark:bg-gray-800"
-      >
-        <a href="https://flowbite.com" class="flex items-center pl-2.5 mb-5">
-          <img
-            src="https://hotc.org.np/static/img/coa.png"
-            class="h-1 w-8 mr-3 sm:h-7"
-            alt="Logo"
-          />
-          <span
-            class="self-center text-xl font-semibold whitespace-nowrap text-white"
-            >HOTC</span
-          >
-        </a>
+  <div class="flex flex-col gap-5 ml-7">
+    <aside class="" aria-label="Sidebar">
+      <div class="overflow-y-auto px-5 bg-white rounded">
         <ul class="space-y-2">
-          <li>
-            <a
-              href="/news"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700"
-            >
-              <svg
-                class="w-6 h-6 text-white transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+          <li class="">
+            <NuxtLink to="/news">
+              <a
+                class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
               >
-                <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-              </svg>
-              <span class="ml-3 text-white">News</span>
-            </a>
+                <svg
+                  class="w-6 h-6 text-white transition duration-75 group-hover:text-gray-900"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+                  <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                </svg>
+                <span class="ml-3 w-full text-white">News</span>
+              </a>
+            </NuxtLink>
           </li>
           <li>
             <a
               href="/syllabus"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700"
+              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
             >
               <svg
-                class="flex-shrink-0 w-6 h-6 text-white transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                class="flex-shrink-0 w-6 h-6 text-white transition duration-75 group-hover:text-gray-900"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +40,7 @@
                 >Syllabus</span
               >
               <span
-                class="inline-flex justify-center items-center px-2 ml-3 text-sm font-medium text-blue-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300"
+                class="inline-flex justify-center items-center px-2 ml-3 text-sm font-medium text-blue-800 bg-gray-200 rounded-full"
                 >New</span
               >
             </a>
@@ -60,10 +48,10 @@
           <li>
             <a
               href="/notice"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700"
+              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
             >
               <svg
-                class="flex-shrink-0 w-6 h-6 text-white transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                class="flex-shrink-0 w-6 h-6 text-white transition duration-75 group-hover:text-gray-900"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,15 +67,15 @@
                 >Notices</span
               >
               <span
-                class="inline-flex justify-center items-center p-3 ml-3 w-3 h-3 text-sm font-medium text-blue-600 bg-blue-200 rounded-full dark:bg-blue-900 dark:text-blue-200"
-                >3</span
+                class="inline-flex justify-center items-center px-2 ml-3 text-sm font-medium text-blue-800 bg-gray-200 rounded-full"
+                >8</span
               >
             </a>
           </li>
           <li>
             <a
               href="/press-cuttings"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700"
+              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
             >
               <svg
                 class="flex-shrink-0 w-6 h-6 text-white transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -109,7 +97,7 @@
           <li>
             <a
               href="/testimonials"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700"
+              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
             >
               <svg
                 class="flex-shrink-0 w-6 h-6 text-white transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -131,7 +119,7 @@
           <li>
             <a
               href="/events"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700"
+              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
             >
               <svg
                 class="flex-shrink-0 w-6 h-6 text-white transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -153,7 +141,7 @@
           <li>
             <a
               href="/gallery"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700"
+              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
             >
               <svg
                 class="flex-shrink-0 w-6 h-6 text-white transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -176,18 +164,16 @@
       </div>
     </aside>
 
-    <aside class="w-64 ov" aria-label="Sidebar">
-      <div
-        class="overflow-y-auto py-4 px-3 bg-blue-500 rounded dark:bg-gray-800"
-      >
+    <aside class="" aria-label="Sidebar">
+      <div class="overflow-y-auto py-4 px-3 bg-white rounded dark:bg-gray-800">
         <ul class="space-y-2">
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700"
+              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
             >
               <span
-                class="flex-1 ml-3 whitespace-nowrap text-white erflow-hidden"
+                class="flex-1 ml-3 whitespace-nowrap text-white overflow-hidden"
                 >TRANSPLANT ACT 2055</span
               >
             </a>
@@ -195,7 +181,7 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700"
+              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
             >
               <span
                 class="flex-1 ml-3 whitespace-nowrap text-white overflow-hidden"
@@ -206,7 +192,7 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700 overflow-hidden"
+              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
             >
               <span class="flex-1 ml-3 whitespace-nowrap text-white"
                 >TRANSPLANT LEGISLATION 2073</span
@@ -216,45 +202,49 @@
         </ul>
       </div>
     </aside>
-    <aside class="w-64" aria-label="Sidebar">
+    <aside class="" aria-label="Sidebar">
       <div
-        class="overflow-y-auto py-4 px-3 bg-red-600 rounded dark:bg-gray-800"
+        class="overflow-y-auto py-4 px-3 mx-3 bg-red-400 hover:bg-red-500 rounded-lg border-red-500 border-2 dark:bg-gray-800"
       >
         <ul>
           <li>
-            <a
-              href="#"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700"
-            >
-              <span
-                class="flex-1 ml-3 whitespace-nowrap text-white overflow-hidden"
+            <div v-for="obj in download.results" :key="obj.id">
+              <a
+                href="/media/images/news_headers/1.jpg"
+                class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700"
+                download
               >
-                Download Organ Donation Form</span
-              >
-            </a>
+                <span
+                  class="flex-1 ml-3 whitespace-nowrap text-white overflow-hidden"
+                >
+                  Download Organ Donation Form</span
+                >
+              </a>
+            </div>
           </li>
         </ul>
       </div>
     </aside>
-    <aside class="w-64" aria-label="Sidebar">
-      <div
-        class="overflow-y-auto py-4 px-3 bg-blue-500 rounded dark:bg-gray-800"
-      >
+    <aside class="" aria-label="Sidebar">
+      <div class="overflow-y-auto py-4 px-3 bg-white rounded dark:bg-gray-800">
         <ul class="space-y-2">
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700"
+              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
             >
               <span class="flex-1 ml-3 whitespace-nowrap text-white"
                 >Legal Notices</span
+              >
+              <span
+                class="inline-flex justify-center items-center px-2 ml-3 text-sm font-medium text-blue-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300"
+                >12</span
               >
             </a>
           </li>
           <li>
             <a
-              href="#"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700"
+              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
             >
               <span class="flex-1 ml-3 whitespace-nowrap text-white"
                 >Interview Result Published</span
@@ -264,10 +254,9 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700"
+              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
             >
-              <span
-                class="flex-1 ml-3 whitespace-nowrap text-white overflow-hidden"
+              <span class="flex-1 ml-3 whitespace-nowrap text-white"
                 >Publication of Service report, SDNTC 2078-79</span
               >
             </a>
@@ -275,7 +264,7 @@
           <li>
             <a
               href="#"
-              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:border-2 dark:hover:bg-gray-700"
+              class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
             >
               <span class="flex-1 ml-3 whitespace-nowrap text-white"
                 >Result Published</span
@@ -288,8 +277,8 @@
   </div>
 </template>
 
-<script>
-export default {}
+<script setup>
+const { data: download } = await useFetch('http://127.0.0.1:8000/download/')
 </script>
 
 <style></style>
