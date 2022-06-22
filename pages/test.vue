@@ -1,14 +1,13 @@
 <template>
-  <div v-for="obj in galleryResponse.results" :key="obj.id">
-    {{ obj.file }}
+  <div>
+    <h1>This is the Persons page</h1>
   </div>
 </template>
 
-<script setup>
-const { data: galleryResponse } = useFetch('http://127.0.0.1:8000/download/')
-definePageMeta({
-  layout: false,
-})
+<script>
+export default {
+  created() {
+    console.log(this.$route.query.page); // john
+  },
+};
 </script>
-
-<style></style>

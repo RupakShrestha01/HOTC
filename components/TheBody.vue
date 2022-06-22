@@ -4,8 +4,9 @@
       <div class="overflow-y-auto px-5 bg-white rounded">
         <ul class="space-y-2">
           <li class="">
-            <NuxtLink to="/news">
+
               <a
+              href="/news"
                 class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition-colors duration-600 transform py-2 bg-blue-400 hover:bg-blue-500 border-2 border-blue-500 hover:border-white hover:shadow-md"
               >
                 <svg
@@ -19,7 +20,6 @@
                 </svg>
                 <span class="ml-3 w-full text-white">News</span>
               </a>
-            </NuxtLink>
           </li>
           <li>
             <a
@@ -208,7 +208,6 @@
       >
         <ul>
           <li>
-            <div v-for="obj in download.results" :key="obj.id">
               <a
                 href="/media/images/news_headers/1.jpg"
                 class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700"
@@ -218,9 +217,7 @@
                   class="flex-1 ml-3 whitespace-nowrap text-white overflow-hidden"
                 >
                   Download Organ Donation Form</span
-                >
-              </a>
-            </div>
+                ></a>
           </li>
         </ul>
       </div>
