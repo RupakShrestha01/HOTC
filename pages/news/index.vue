@@ -98,11 +98,12 @@
           </li>
           <li>
             <a
-              :href="`/news/${apiResponse.next.slice(33)}`"
-              @click="page"
+              
+              @click="pagination"
               class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
               >Next</a
             >
+             <!-- :href="`/news/${apiResponse.next.slice(33)}`" -->
           </li>
         </ul>
       </nav>
@@ -112,7 +113,17 @@
 
 </template>
 
-<script setup >
+<script setup lang="ts">
+const pageValue = ref(1);
+const myData = ref([]) as any;
+
+const count = ref(0);
+async function pagination() {
+  const data = await fetch(`/api/page?page=${pageValue.value}`);
+  const json = await data.json();
+  console.log("data.value", json);
+  myData.value = json;
+}
 const { data: apiResponse } = await useFetch('http://127.0.0.1:8000/news/')
 
 

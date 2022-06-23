@@ -15,16 +15,13 @@ module.exports = {
         ane: ['Anek Malayalam', 'sans-serif'],
       },
     },
-    screens: {
-      sm: '375px',
-      // => @media (min-width: 640px) { ... }
+    // screens: {
+    //   md: '375px',
+    //   // => @media (min-width: 1024px) { ... }
 
-      md: '820px',
-      // => @media (min-width: 1024px) { ... }
-
-      lg: '1280px',
-      // => @media (min-width: 1280px) { ... }
-    },
+    //   lg: '820px',
+    //   // => @media (min-width: 1280px) { ... }
+    // },
 
     height: {
       128: '37rem',

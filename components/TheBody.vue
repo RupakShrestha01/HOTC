@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-5 ml-7">
+  <div class="flex flex-col gap-5 ml-7 lg:mx-7 md:mx-52 ">
     <aside class="" aria-label="Sidebar">
       <div class="overflow-y-auto px-5 bg-white rounded">
         <ul class="space-y-2">
@@ -208,6 +208,7 @@
       >
         <ul>
           <li>
+            <div v-for="obj in download.results" :key="obj.id">
               <a
                 href="/media/images/news_headers/1.jpg"
                 class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700"
@@ -217,7 +218,9 @@
                   class="flex-1 ml-3 whitespace-nowrap text-white overflow-hidden"
                 >
                   Download Organ Donation Form</span
-                ></a>
+                >
+              </a>
+            </div>
           </li>
         </ul>
       </div>

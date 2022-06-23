@@ -1,13 +1,9 @@
-<template>
-  <div>
-    <h1>This is the Persons page</h1>
+<template lang="">
+  <div v-for="obj in apiResponse" ::key="obj.id">
+  
+    {{obj.menu_items}}
   </div>
 </template>
-
-<script>
-export default {
-  created() {
-    console.log(this.$route.query.page); // john
-  },
-};
+<script setup>
+const {data:apiResponse} =  useFetch('http://127.0.0.1:8000/menus/')
 </script>
