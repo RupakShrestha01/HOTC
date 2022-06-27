@@ -1,9 +1,13 @@
 <template>
   <div>
     <div class="grid grid-cols-2 px-32 gap-32">
-      <div class="" v-for="obj in apiResponse.results" :key="obj.id">
+      <div
+        class=""
+        v-for="obj in apiResponse.results"
+        :key="obj.id"
+        v-show="isHidden"
+      >
         <div
-          v-if="isHidden"
           class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
         >
           <a href="#">
@@ -56,7 +60,7 @@
     </div>
     <div>
       <div class="grid grid-cols-2 px-32 gap-32">
-        <div class="" v-for="obj in apiResponse.results" :key="obj.id">
+        <div class="" v-for="obj in myData.results" :key="obj.id">
           <div
             class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
           >
@@ -109,11 +113,77 @@
         </div>
       </div>
     </div>
-    <ThePagination></ThePagination>
+    <div class="text-center mt-16">
+      <nav aria-label="Page navigation example">
+        <ul class="inline-flex -space-x-px">
+          <li>
+            <a
+              @click="pagination(), pageValue--"
+              class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 cursor-pointer hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              >Previous</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              >1</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              >2</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              aria-current="page"
+              class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+              >3</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              >4</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              >5</a
+            >
+          </li>
+          <li>
+            <a
+              @click="pagination(), pageValue++, (isHidden = false)"
+              class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 cursor-pointer hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+              >Next</a
+            >
+            <!-- :href="`/news/${apiResponse.next.slice(33)}`" -->
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+let isHidden = ref(true)
+const pageValue = ref(2)
+const myData = ref([]) as any
+async function pagination() {
+  const data = await fetch(`/api/page?page=${pageValue.value}`)
+  const json = await data.json()
+  myData.value = json
+  console.log('data.value', json)
+}
+
 const { data: apiResponse } = await useFetch('http://127.0.0.1:8000/news/')
 </script>
 

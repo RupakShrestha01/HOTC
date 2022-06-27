@@ -1,9 +1,6 @@
 <template lang="">
-  <div v-for="obj in apiResponse" ::key="obj.id">
-  
-    {{obj.menu_items}}
-  </div>
+  <TheSearch></TheSearch>
 </template>
 <script setup>
-const {data:apiResponse} =  useFetch('http://127.0.0.1:8000/menus/')
+const { data: apiResponse } = await useFetch('http://127.0.0.1:8000/news/')
 </script>
