@@ -34,7 +34,7 @@
   </div>
 </template>
 
-<script setup >
+<script setup lang="ts" >
 import {} from '#app'
 const route = useRoute()
 const name = route.params.slug
